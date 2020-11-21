@@ -1,0 +1,8 @@
+curl --user NANO0056BE:570925388 --request GET https://mcs.dev.c4454n.com/mbo/nano/22206/work && echo
+{"minWorkDelay":60,"minRetryDelay":60,"workId":36,"workType":"stageconfig","workRequest":"nano/22206/config","crc32":3437081428}
+curl --user NANO0056BE:570925388 --request GET https://mcs.dev.c4454n.com/mbo/nano/22206/config --output config.xml && echo
+curl --user NANO0056BE:570925388 --request POST https://mcs.dev.c4454n.com/mbo/nano/22206/work --header 'Content-Type: application/json' --data '{"workId":"36","workFailed":"false"}' && echo
+{"minWorkDelay":60,"minRetryDelay":60,"workId":37,"workType":"installconfig","workRequest":"ccddb354"}
+[edit init.json]
+curl --user NANO0056BE:570925388 --request POST https://mcs.dev.c4454n.com/mbo/nano/22206/init --header 'Content-Type: application/json' --data @init.json && echo
+curl --user NANO0056BE:570925388 --request GET https://mcs.dev.c4454n.com/mbo/nano/22206/work && echo

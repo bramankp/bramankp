@@ -1,0 +1,26 @@
+<NanoConfig>
+    <PanelConfig>
+        <CallIntervalMinutes>5</CallIntervalMinutes>
+        <CreditingData aRms="true" cbet="true" irSig="false"
+            n2Code="true" n6Code="true" ndSig="false" paSig="true"
+            sfp="true" utSig="false"/>
+        <InfraRedSignatures type="modifiedCsp1"/>
+    </PanelConfig>
+    <HouseHoldConfig>
+        <DailyHeartbeatCall retries="5" retryMinutes="20" utcHour="8"
+            utcMinute="00" utcSecond="0">
+            <DaylightSavingTime end="2018-11-05 02:00-04:00" start="2018-03-12 02:00-05:00"/>
+            <DaylightSavingTime end="2019-11-04 02:00-04:00" start="2019-03-11 02:00-05:00"/>
+            <DaylightSavingTime end="2020-11-02 02:00-04:00" start="2020-03-09 02:00-05:00"/>
+        </DailyHeartbeatCall>
+        <PeopleMeter demoMode="3" hhMembers="9" tamId="ustam"/>
+    </HouseHoldConfig>
+    <MeterConfig>
+        <BlueCTSA autoCalibration="off" mac="e6:38:93:4f:f9:fc" transitionThreshold="30"/>
+        <ExpansionAdapter mac="d2:0c:a6:87:31:74"/>
+        <Codec input="lineIn"/>
+        <VerboseData></VerboseData>
+        <PMX mode="mainUnit"/>
+        <PeopleMeterAudio mode="off" start="0:00" stop="0:00" volume="50"/>
+    </MeterConfig>
+</NanoConfig>

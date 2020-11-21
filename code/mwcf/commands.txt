@@ -1,0 +1,2 @@
+curl --user NANO0056BE:570925388 --request POST https://beta.mwcollection.nielsen.com/mwcf/nano/22206/init \
+    --header 'Content-Type: text/xml' --data @init.xml
