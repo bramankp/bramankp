@@ -23,7 +23,8 @@
             "command": "build\\configure-release.cmd",
             "args": [
                 "666",
-                "1"
+                "1",
+                "Ninja"
             ],
             "options": {
                 "cwd": "${workspaceRoot}"
@@ -39,6 +40,9 @@
                 "clear": true
             },
             "command": "build\\configure-testing.cmd",
+            "args": [
+                "Ninja"
+            ],
             "options": {
                 "cwd": "${workspaceRoot}"
             },
@@ -52,7 +56,11 @@
                 "panel": "shared",
                 "clear": true
             },
-            "command": "mingw32-make",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "."
+            ],
             "options": {
                 "cwd": "${workspaceRoot}/build-release"
             },
@@ -68,7 +76,11 @@
                 "panel": "shared",
                 "clear": true
             },
-            "command": "mingw32-make",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "."
+            ],
             "options": {
                 "cwd": "${workspaceRoot}/build-testing"
             },
