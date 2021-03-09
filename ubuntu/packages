@@ -1,4 +1,4 @@
 build-essential g++-multilib
-cmake ninja-build clang-format
-python python-setuptools python-six
+cmake ninja-build clang-format clang-tidy
+python3 python3-setuptools python3-six python-is-python3
 default-jdk-headless maven
