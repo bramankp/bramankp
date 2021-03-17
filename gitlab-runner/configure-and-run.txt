@@ -7,7 +7,7 @@ Running in system-mode.
 Enter the GitLab instance URL (for example, https://gitlab.com/):
 https://gitlab.com/
 Enter the registration token:
-KJCP-8C2xzkiZPytDX8s
+<...>
 Enter a description for the runner:
 [21326d58b6df]: USDGSC24Z2
 Enter tags for the runner (comma-separated):
