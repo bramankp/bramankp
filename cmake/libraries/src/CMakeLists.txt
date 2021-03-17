@@ -1,4 +1,5 @@
 add_executable(example main.cpp)
 add_subdirectory(utility)
 add_subdirectory(functional)
-target_link_libraries(example PRIVATE functional)
+add_subdirectory(prebuilt)
+target_link_libraries(example PRIVATE functional prebuilt)
