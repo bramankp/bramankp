@@ -19,3 +19,17 @@ Enter the default Docker image (for example, ruby:2.6):
 registry.gitlab.com/nielsen-media/eng/meters/nano/nano/eng-meters-nano
 Runner registered successfully. Feel free to start it, but if it's running already the config should be automatically reloaded!
 [bramankp@USDGSC24Z2:~] docker run --detach --name gitlab-runner-nano --restart always --volume gitlab-runner-nano:/etc/gitlab-runner --volume /var/run/docker.sock:/var/run/docker.sock gitlab/gitlab-runner
+
+
+sudo apt --yes install docker.io
+sudo gpasswd --add ubuntu docker
+sudo reboot
+
+docker pull gitlab/gitlab-runner
+docker volume create gitlab-runner-gtam
+docker run --rm --interactive --volume gitlab-runner-gtam:/etc/gitlab-runner gitlab/gitlab-runner register
+
+docker run --detach --name gitlab-runner-gtam --restart always \
+    --volume gitlab-runner-gtam:/etc/gitlab-runner \
+    --volume /var/run/docker.sock:/var/run/docker.sock \
+    gitlab/gitlab-runner
