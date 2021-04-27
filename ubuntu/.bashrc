@@ -59,10 +59,9 @@ PS2='[...] '
 # my additional paths
 #
 newpaths=()
+newpaths+=(~/.local/bin)
 newpaths+=(~gtam/bin)
 newpaths+=(~nano/bin)
-newpaths+=(~coverity/bin)
-newpaths+=(~/Sencha/Cmd/5.0.0.160)
 envpath=${PATH}
 for newpath in ${newpaths[@]}
 do
