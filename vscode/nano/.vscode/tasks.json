@@ -2,19 +2,10 @@
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format
     "version": "2.0.0",
-    "options": {
-        "shell": {
-            "executable": "cmd.exe",
-            "args": [
-                "/d",
-                "/c"
-            ]
-        }
-    },
     "tasks": [
         {
             "label": "Configure Release",
-            "type": "shell",
+            "type": "process",
             "group": "build",
             "presentation": {
                 "panel": "shared",
@@ -33,7 +24,7 @@
         },
         {
             "label": "Configure Testing",
-            "type": "shell",
+            "type": "process",
             "group": "build",
             "presentation": {
                 "panel": "shared",
@@ -59,10 +50,10 @@
             "command": "cmake",
             "args": [
                 "--build",
-                "."
+                "build-release"
             ],
             "options": {
-                "cwd": "${workspaceRoot}/build-release"
+                "cwd": "${workspaceRoot}"
             },
             "problemMatcher": [
                 "$gcc"
@@ -79,10 +70,10 @@
             "command": "cmake",
             "args": [
                 "--build",
-                "."
+                "build-testing"
             ],
             "options": {
-                "cwd": "${workspaceRoot}/build-testing"
+                "cwd": "${workspaceRoot}"
             },
             "problemMatcher": [
                 "$gcc"
