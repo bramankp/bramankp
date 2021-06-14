@@ -1,0 +1,23 @@
+{
+    "version": 4,
+    "configurations": [
+        {
+            "name": "Nano",
+            "defines": [
+                "__SAMS70N21__",
+                "BOARD=USER_BOARD",
+                "_NANO_",
+                "_EMBED_LAYER_INFO_",
+                "_SHOW_ALL_CODES_",
+                "_DUAL_CODECS_"
+            ],
+            "includePath": [
+                "${workspaceRoot}/**"
+            ],
+            "intelliSenseMode": "gcc-arm",
+            "compilerPath": "/home/nano/bin/arm-none-eabi-gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++14"
+        }
+    ]
+}
