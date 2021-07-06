@@ -1,0 +1,81 @@
+{
+        // See https://go.microsoft.com/fwlink/?LinkId=733558
+        // for the documentation about the tasks.json format
+        "version": "2.0.0",
+        "tasks": [
+                {
+                        "label": "Make Spotless",
+                        "type": "process",
+                        "group": "build",
+                        "presentation": {
+                                "panel": "shared",
+                                "clear": true
+                        },
+                        "command": "make",
+                        "args": [
+                                "spotless"
+                        ],
+                        "options": {
+                                "cwd": "${workspaceRoot}"
+                        },
+                        "problemMatcher": []
+                },
+                {
+                        "label": "Make GTAM",
+                        "type": "process",
+                        "group": "build",
+                        "presentation": {
+                                "panel": "shared",
+                                "clear": true
+                        },
+                        "command": "make",
+                        "args": [
+                                "-C",
+                                "GMS",
+                                "gtam"
+                        ],
+                        "options": {
+                                "cwd": "${workspaceRoot}"
+                        },
+                        "problemMatcher": []
+                },
+                {
+                        "label": "Make GTLT",
+                        "type": "process",
+                        "group": "build",
+                        "presentation": {
+                                "panel": "shared",
+                                "clear": true
+                        },
+                        "command": "make",
+                        "args": [
+                                "-C",
+                                "GMS",
+                                "gtlt"
+                        ],
+                        "options": {
+                                "cwd": "${workspaceRoot}"
+                        },
+                        "problemMatcher": []
+                },
+                {
+                        "label": "Make Test",
+                        "type": "process",
+                        "group": "build",
+                        "presentation": {
+                                "panel": "shared",
+                                "clear": true
+                        },
+                        "command": "make",
+                        "args": [
+                                "-C",
+                                "GMS",
+                                "test"
+                        ],
+                        "options": {
+                                "cwd": "${workspaceRoot}"
+                        },
+                        "problemMatcher": []
+                }
+        ]
+}
