@@ -59,6 +59,25 @@
                         "problemMatcher": []
                 },
                 {
+                        "label": "Make GTCR",
+                        "type": "process",
+                        "group": "build",
+                        "presentation": {
+                                "panel": "shared",
+                                "clear": true
+                        },
+                        "command": "make",
+                        "args": [
+                                "-C",
+                                "GMS",
+                                "gtcr"
+                        ],
+                        "options": {
+                                "cwd": "${workspaceRoot}"
+                        },
+                        "problemMatcher": []
+                },
+                {
                         "label": "Make Test",
                         "type": "process",
                         "group": "build",
