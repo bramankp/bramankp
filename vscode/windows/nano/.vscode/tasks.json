@@ -4,7 +4,26 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Configure Release",
+            "label": "Configure Release 5",
+            "type": "process",
+            "group": "build",
+            "presentation": {
+                "panel": "shared",
+                "clear": true
+            },
+            "command": "build\\configure-release.cmd",
+            "args": [
+                "666",
+                "5",
+                "Ninja"
+            ],
+            "options": {
+                "cwd": "${workspaceRoot}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Configure Release 6",
             "type": "process",
             "group": "build",
             "presentation": {
@@ -15,6 +34,25 @@
             "args": [
                 "666",
                 "6",
+                "Ninja"
+            ],
+            "options": {
+                "cwd": "${workspaceRoot}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Configure Release 7",
+            "type": "process",
+            "group": "build",
+            "presentation": {
+                "panel": "shared",
+                "clear": true
+            },
+            "command": "build\\configure-release.cmd",
+            "args": [
+                "666",
+                "7",
                 "Ninja"
             ],
             "options": {
