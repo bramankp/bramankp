@@ -1,0 +1,99 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Configure Release",
+            "type": "process",
+            "group": "build",
+            "presentation": {
+                "panel": "shared",
+                "clear": true
+            },
+            "command": "sh",
+            "args": [
+                "build/configure-release.sh",
+                "666",
+                "1",
+                "Ninja"
+            ],
+            "options": {
+                "cwd": "${workspaceRoot}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Configure Testing",
+            "type": "process",
+            "group": "build",
+            "presentation": {
+                "panel": "shared",
+                "clear": true
+            },
+            "command": "sh",
+            "args": [
+                "build/configure-testing.sh",
+                "Ninja"
+            ],
+            "options": {
+                "cwd": "${workspaceRoot}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build Release",
+            "type": "process",
+            "group": "build",
+            "presentation": {
+                "panel": "shared",
+                "clear": true
+            },
+            "command": "cmake",
+            "args": [
+                "--build",
+                "build-release"
+            ],
+            "options": {
+                "cwd": "${workspaceRoot}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Build Testing",
+            "type": "process",
+            "group": "build",
+            "presentation": {
+                "panel": "shared",
+                "clear": true
+            },
+            "command": "cmake",
+            "args": [
+                "--build",
+                "build-testing"
+            ],
+            "options": {
+                "cwd": "${workspaceRoot}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Execute Tests",
+            "type": "process",
+            "group": "build",
+            "presentation": {
+                "panel": "shared",
+                "clear": true
+            },
+            "command": "./runalltests",
+            "options": {
+                "cwd": "${workspaceRoot}/build-testing"
+            },
+            "problemMatcher": []
+        }
+    ]
+}

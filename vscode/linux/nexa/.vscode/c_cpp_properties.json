@@ -1,0 +1,22 @@
+{
+    "version": 4,
+    "configurations": [
+        {
+            "name": "NExA",
+            "defines": [
+                "__SAMS70Q21__",
+                "BOARD=USER_BOARD",
+                "EA_EVT2",
+                "_EMBED_LAYER_INFO_",
+                "_SHOW_ALL_CODES_"
+            ],
+            "includePath": [
+                "${workspaceRoot}/**"
+            ],
+            "intelliSenseMode": "gcc-arm",
+            "compilerPath": "/home/nano/bin/arm-none-eabi-gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++14"
+        }
+    ]
+}
