@@ -1,0 +1,63 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "clean",
+            "type": "shell",
+            "group": "build",
+            "presentation": {
+                "panel": "shared",
+                "clear": true
+            },
+            "command": "rm --recursive --force build package",
+            "options": {
+                "cwd": "${workspaceRoot}"
+            }
+        },
+        {
+            "label": "configure",
+            "type": "shell",
+            "group": "build",
+            "presentation": {
+                "panel": "shared",
+                "clear": true
+            },
+            "command": "cmake -Bbuild -DWARNINGS_AS_ERRORS=OFF -GNinja",
+            "options": {
+                "cwd": "${workspaceRoot}"
+            }
+        },
+        {
+            "label": "build",
+            "type": "shell",
+            "group": "build",
+            "presentation": {
+                "panel": "shared",
+                "clear": true
+            },
+            "command": "cmake --build build",
+            "options": {
+                "cwd": "${workspaceRoot}"
+            }
+        },
+        {
+            "label": "rebuild",
+            "group": "build",
+            "presentation": {
+                "panel": "shared",
+                "clear": true
+            },
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "clean",
+                "configure",
+                "build"
+            ],
+            "options": {
+                "cwd": "${workspaceRoot}"
+            }
+        }
+    ]
+}
