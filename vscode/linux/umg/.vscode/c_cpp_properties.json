@@ -1,0 +1,32 @@
+{
+    "configurations": [
+        {
+            "name": "Release",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/opt/poky-tiny/3.1.12/sysroots/armv7vet2hf-neon-poky-linux-gnueabi/usr/include/**"
+            ],
+            "defines": [
+                "__ARM_PCS_VFP"
+            ],
+            "compilerPath": "/opt/poky-tiny/3.1.12/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc",
+            "intelliSenseMode": "linux-gcc-arm",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        },
+        {
+            "name": "Unit Test",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "UTBUILD"
+            ],
+            "compilerPath": "/usr/bin/gcc",
+            "intelliSenseMode": "gcc-x64",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}

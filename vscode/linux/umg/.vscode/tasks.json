@@ -17,14 +17,27 @@
             }
         },
         {
-            "label": "configure",
+            "label": "configure release",
             "type": "shell",
             "group": "build",
             "presentation": {
                 "panel": "shared",
                 "clear": true
             },
-            "command": "cmake -Bbuild -DWARNINGS_AS_ERRORS=OFF -GNinja",
+            "command": "cmake -Bbuild -GNinja",
+            "options": {
+                "cwd": "${workspaceRoot}"
+            }
+        },
+        {
+            "label": "configure testing",
+            "type": "shell",
+            "group": "build",
+            "presentation": {
+                "panel": "shared",
+                "clear": true
+            },
+            "command": "cmake -Bbuild -GNinja -DUTBUILD=ON",
             "options": {
                 "cwd": "${workspaceRoot}"
             }
@@ -43,18 +56,27 @@
             }
         },
         {
-            "label": "rebuild",
+            "label": "execute testing",
+            "type": "shell",
             "group": "build",
             "presentation": {
                 "panel": "shared",
                 "clear": true
             },
-            "dependsOrder": "sequence",
-            "dependsOn": [
-                "clean",
-                "configure",
-                "build"
-            ],
+            "command": "build/test/apptest",
+            "options": {
+                "cwd": "${workspaceRoot}"
+            }
+        },
+        {
+            "label": "deploy",
+            "type": "shell",
+            "group": "build",
+            "presentation": {
+                "panel": "shared",
+                "clear": true
+            },
+            "command": "sshpass -pmandrake scp -r package/UMG/ root@192.168.0.1:/opt/",
             "options": {
                 "cwd": "${workspaceRoot}"
             }
