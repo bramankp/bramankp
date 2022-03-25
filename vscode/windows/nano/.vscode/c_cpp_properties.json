@@ -2,9 +2,10 @@
     "version": 4,
     "configurations": [
         {
-            "name": "Nano",
+            "name": "Release",
             "defines": [
                 "__SAMS70N21__",
+                "VERSION_HARDWARE=7",
                 "BOARD=USER_BOARD",
                 "_NANO_",
                 "_EMBED_LAYER_INFO_",
@@ -15,6 +16,25 @@
             ],
             "intelliSenseMode": "gcc-arm",
             "compilerPath": "\"C:/Program Files (x86)/GNU Tools ARM Embedded/8 2019-q3-update/bin/arm-none-eabi-gcc\"",
+            "cStandard": "c11",
+            "cppStandard": "c++14"
+        },
+        {
+            "name": "Unit Test",
+            "defines": [
+                "__SAMS70N21__",
+                "VERSION_HARDWARE=7",
+                "BOARD=USER_BOARD",
+                "_NANO_",
+                "_EMBED_LAYER_INFO_",
+                "_SHOW_ALL_CODES_",
+                "UNIT_TEST"
+            ],
+            "includePath": [
+                "${workspaceRoot}/**"
+            ],
+            "intelliSenseMode": "windows-gcc-x86",
+            "compilerPath": "\"C:/Program Files (x86)/mingw-w64/i686-7.3.0-posix-dwarf-rt_v5-rev0/mingw32/bin/gcc.exe\"",
             "cStandard": "c11",
             "cppStandard": "c++14"
         }
