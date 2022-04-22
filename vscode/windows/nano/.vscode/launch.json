@@ -8,12 +8,19 @@
             "name": "Cortex Debug",
             "cwd": "${workspaceRoot}",
             "executable": "build-release/nano.elf",
-            "serverpath": "C:/Program Files (x86)/SEGGER/JLink_V642f/JLinkGDBServerCL.exe",
+            "serverpath": "C:/Program Files/SEGGER/JLink/JLinkGDBServerCL.exe",
             "armToolchainPath": "C:/Program Files (x86)/Atmel/Studio/7.0/toolchain/arm/arm-gnu-toolchain/bin",
             "request": "launch",
             "type": "cortex-debug",
             "servertype": "jlink",
-            "device": "ATSAMS70N21"
+            "device": "ATSAMS70N21",
+            "runToMain": true,
+            // "serialNumber": "504402306",
+            "svdFile": "build/ATSAMS70N21B.svd",
+            "showDevDebugOutput": "both",
+            "preLaunchCommands": [
+                "directory build-release"
+            ]
         }
     ]
 }
