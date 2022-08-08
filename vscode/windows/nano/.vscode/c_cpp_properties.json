@@ -8,6 +8,7 @@
                 "VERSION_HARDWARE=7",
                 "BOARD=USER_BOARD",
                 "_NANO_",
+                "_PVT2_",
                 "_EMBED_LAYER_INFO_",
                 "_SHOW_ALL_CODES_"
             ],

@@ -56,6 +56,8 @@
         "mutex": "cpp",
         "thread": "cpp",
         "cinttypes": "cpp",
-        "*.inc": "cpp"
+        "*.inc": "cpp",
+        "optional": "cpp",
+        "string_view": "cpp"
     }
 }
