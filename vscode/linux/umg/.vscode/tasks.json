@@ -11,7 +11,7 @@
                 "panel": "shared",
                 "clear": true
             },
-            "command": "rm --recursive --force build package",
+            "command": "git clean -dfx --exclude .vscode",
             "options": {
                 "cwd": "${workspaceRoot}"
             }
@@ -76,7 +76,7 @@
                 "panel": "shared",
                 "clear": true
             },
-            "command": "sshpass -pmandrake scp -r package/UMG/ root@192.168.0.1:/opt/",
+            "command": "sshpass -p'-------------' scp -r package/UMG/ root@10.11.12.1:/opt/",
             "options": {
                 "cwd": "${workspaceRoot}"
             }
