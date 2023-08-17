@@ -82,5 +82,5 @@ export PATH=${envpath}
 #
 # SSH keychain
 #
-#/usr/bin/env keychain --nogui ~/.ssh/id_rsa
+#/usr/bin/env keychain --nogui --quick --quiet ~/.ssh/id_rsa
 #source ~/.keychain/$HOSTNAME-sh
