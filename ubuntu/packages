@@ -2,3 +2,8 @@ build-essential g++-multilib
 cmake ninja-build clang-format clang-tidy
 python3 python3-setuptools python3-six python-is-python3
 default-jdk-headless maven
+
+keychain
+
+apt install --no-install-recommends python3 python3-pip python-is-python3
+pip install --break-system-packages --user awscli gimme-aws-cred
