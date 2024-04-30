@@ -5,5 +5,7 @@ default-jdk-headless maven
 
 keychain
 
-apt install --no-install-recommends python3 python3-pip python-is-python3
+sudo apt install --no-install-recommends python3 python3-pip python-is-python3
 pip install --break-system-packages --user awscli gimme-aws-cred
+
+sudo apt install --no-install-recommends build-essential g++-multilib gdb-multiarch valgrind cmake ninja-build clang-format
